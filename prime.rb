@@ -1,13 +1,6 @@
-def prime? num
-  if num == 2
-    is_prime = true
+def prime?(num)
+  (2..(num - 1)).each do |n|
+    return false if num % n == 0
   end
-  for i in 3..num/2
-    if num % i == 0
-      is_prime = false
-    else
-      is_prime = true
-    end
-  end
-  return is_prime
+  true
 end
