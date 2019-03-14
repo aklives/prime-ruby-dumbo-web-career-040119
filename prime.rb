@@ -1,20 +1,13 @@
 def prime? num
-    if num <= 1
+  if num == 2
+    is_prime = true
+  end
+  for i in 3..num/2
+    if num % i == 0
       is_prime = false
-      return is_prime
-    end
-
-    if num == 2
+    else
       is_prime = true
-      return is_prime
     end
-
-    for i in 2..num
-      is_prime = false
-      if num != i && num % i == 0
-        is_prime = true
-      end
-    end
-
-return is_prime
+  end
+  return is_prime
 end
